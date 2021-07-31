@@ -21,10 +21,13 @@ export default function( state = [], action ) {
 			}
 
 		case types.GET_DEMO_SUCCESS:
-			if (action.demoData){
+			if (action.demoData) {
+
 				return { action, action.demoData };
 			}
-			return [...state, action ];
+		
+			case types.GET_DEMO_SUCCESS:
+				return [...state, action ];
 	
 		default:
 			return state;
